@@ -18,20 +18,15 @@ jobs:
       with:
         node-version: '18'
         cache: 'npm'
-        cache-dependency-path: my-react-app/package-lock.json
         
     - name: Install dependencies
-      run: |
-        cd my-react-app
-        npm ci
+      run: npm ci
         
     - name: Build
-      run: |
-        cd my-react-app
-        npm run build
+      run: npm run build
         
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: my-react-app/dist
+        publish_dir: ./dist
