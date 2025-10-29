@@ -1,6 +1,6 @@
 .header-welcome-text {
   color: #f96d00; /* Sets the text color to white */
-  font-size: 1rem;
+  font-size: 15px;
   font-weight: 700;
   cursor: pointer;
   text-decoration: none; /* 👈 IMPORTANT: Removes the default link underline */
