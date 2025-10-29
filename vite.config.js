@@ -4,9 +4,10 @@ import react from '@vitejs/plugin-react'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: process.env.VITE_BASE_PATH || "/keolu-beer",
+  base: process.env.VITE_BASE_PATH || "/keolu-beer/",
   build: {
-    // ... other build options
-    cssMinify: false, // <-- ADD THIS LINE
+    outDir: 'dist',
+    cssMinify: false,
+    assetsDir: 'assets'
   }
 })
