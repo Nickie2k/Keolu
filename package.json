@@ -8,7 +8,7 @@
     "build": "vite build",
     "lint": "eslint . --ext .js,.jsx --config ./config/.eslintrc.cjs",
     "preview": "vite preview",
-    "predeploy": "npm run buid",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
