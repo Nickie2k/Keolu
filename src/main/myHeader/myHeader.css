@@ -1,0 +1,89 @@
+.my-header-container {
+  background-color: white;
+  width: 100%;
+  padding: 20px 40px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  height: 34px;
+}
+
+.my-header-left {
+  flex: 1;
+}
+
+.my-header-brand {
+  color: #333;
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0;
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
+
+  align-items: center;
+  margin-top: -4px;
+}
+
+.my-header-right {
+  display: flex;
+  gap: 1px;
+  align-items: center;
+}
+
+.my-header-link {
+  color: #333;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px 2px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  margin-right: 90px;
+}
+
+.my-header-link:hover {
+  color: #f96d00;
+  transform: translateY(-1px);
+}
+
+.my-header-link:focus {
+  outline: 1px solid #f96d00;
+  outline-offset: 1px;
+}
+
+.my-header-icon {
+  width: 45px;
+  height: 45px;
+  margin-left: 8px;
+  vertical-align: middle;
+  transition: transform 0.3s ease;
+}
+
+.my-header-link:hover .my-header-icon {
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .my-header-container {
+    padding: 15px 20px;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .my-header-brand {
+    font-size: 24px;
+  }
+
+  .my-header-right {
+    gap: 20px;
+  }
+
+  .my-header-link {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+}

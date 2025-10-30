@@ -15,9 +15,9 @@ body {
   min-height: 200vh;
 }
 
-/* {
+/* * {
   border: 1px solid red;
-}
+} */
 .header-welcome-text {
   color: #f96d00; /* Sets the text color to white */
   font-size: 15px;
