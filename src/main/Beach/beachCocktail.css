@@ -1,17 +1,257 @@
+.beach-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
 .beachCocktail {
-  width: 100%; /* Make it responsive */
+  width: 100%;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 0px;
-
+  margin-top: 0;
   height: 500px;
   object-fit: cover;
-  object-position: middle;
+  object-position: center;
+}
+
+/* Only apply hover effects on devices that support hover */
+@media (hover: hover) and (pointer: fine) {
+  .beer-cta:hover {
+    color: #ffed4e;
+  }
 }
 
 .text-over {
   position: absolute;
-  top: 32%;
-  left: 150px;
+  top: 18%;
+  left: 70px;
+  color: white;
+  text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.8);
+  max-width: 600px;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.beer-heading {
+  font-size: 4rem;
+  font-weight: bold;
+  margin: 0 0 15px 0;
+  letter-spacing: 4px;
+  color: #ffd700;
+  text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.9);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.beer-tagline {
+  font-size: 1.8rem;
+  font-style: italic;
+  margin: 12px 0;
+  color: #fff;
+  font-weight: 300;
+  opacity: 0.95;
+  -webkit-font-smoothing: antialiased;
+}
+
+.beer-description {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  margin: 18px 0;
+  color: #fff;
+  font-weight: 400;
+  opacity: 0.95;
+  -webkit-font-smoothing: antialiased;
+}
+
+.beer-cta {
+  font-size: 1.3rem;
+  margin-top: 25px;
+  font-weight: 600;
+  color: #ffd700;
+  border-left: 4px solid #ffd700;
+  padding-left: 15px;
+  transition: color 0.3s ease;
+  display: inline-block;
+}
+
+/* Responsive design for smaller screens */
+
+/* Tablets and larger phones (up to 768px) */
+@media (max-width: 768px) {
+  .beachCocktail {
+    height: 450px;
+  }
+
+  .text-over {
+    left: 30px;
+    right: 30px;
+    top: 20%;
+    max-width: calc(100% - 60px);
+  }
+
+  .beer-heading {
+    font-size: 2.8rem;
+    letter-spacing: 3px;
+  }
+
+  .beer-tagline {
+    font-size: 1.4rem;
+  }
+
+  .beer-description {
+    font-size: 1.1rem;
+    line-height: 1.5;
+  }
+
+  .beer-cta {
+    font-size: 1.1rem;
+    margin-top: 15px;
+  }
+}
+
+/* iPhone 14 Pro Max and similar (430px and below) */
+@media (max-width: 430px) {
+  .beachCocktail {
+    height: 400px;
+  }
+
+  .text-over {
+    left: 20px;
+    right: 20px;
+    top: 15%;
+    max-width: calc(100% - 40px);
+  }
+
+  .beer-heading {
+    font-size: 2.2rem;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+  }
+
+  .beer-tagline {
+    font-size: 1.2rem;
+    margin: 8px 0;
+  }
+
+  .beer-description {
+    font-size: 0.95rem;
+    line-height: 1.4;
+    margin: 12px 0;
+  }
+
+  .beer-cta {
+    font-size: 0.95rem;
+    margin-top: 12px;
+    padding-left: 12px;
+    border-left-width: 3px;
+  }
+}
+
+/* iPhone 12/13/14 Pro and similar (390px and below) */
+@media (max-width: 390px) {
+  .beachCocktail {
+    height: 380px;
+  }
+
+  .text-over {
+    left: 18px;
+    right: 18px;
+    top: 12%;
+  }
+
+  .beer-heading {
+    font-size: 2rem;
+    letter-spacing: 1.5px;
+  }
+
+  .beer-tagline {
+    font-size: 1.1rem;
+  }
+
+  .beer-description {
+    font-size: 0.9rem;
+  }
+
+  .beer-cta {
+    font-size: 0.9rem;
+  }
+}
+
+/* iPhone SE and smaller devices (375px and below) */
+@media (max-width: 375px) {
+  .beachCocktail {
+    height: 350px;
+  }
+
+  .text-over {
+    left: 15px;
+    right: 15px;
+    top: 10%;
+    max-width: calc(100% - 30px);
+  }
+
+  .beer-heading {
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+  }
+
+  .beer-tagline {
+    font-size: 1rem;
+    margin: 6px 0;
+  }
+
+  .beer-description {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    margin: 10px 0;
+  }
+
+  .beer-cta {
+    font-size: 0.85rem;
+    margin-top: 10px;
+    padding-left: 10px;
+  }
+}
+
+/* Very small devices (320px and below) */
+@media (max-width: 320px) {
+  .beachCocktail {
+    height: 320px;
+  }
+
+  .text-over {
+    left: 12px;
+    right: 12px;
+    top: 8%;
+  }
+
+  .beer-heading {
+    font-size: 1.6rem;
+    letter-spacing: 0.5px;
+  }
+
+  .beer-tagline {
+    font-size: 0.9rem;
+  }
+
+  .beer-description {
+    font-size: 0.8rem;
+    line-height: 1.3;
+  }
+
+  .beer-cta {
+    font-size: 0.8rem;
+  }
 }

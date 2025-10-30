@@ -1,21 +1,8 @@
 .slider-container {
   width: 100%;
-  max-width: 1200px;
-  margin: 40px auto;
-  padding: 20px;
-  background: #fff;
-}
-
-.slider-title {
-  text-align: center;
-  font-size: 32px;
-  font-weight: 700;
-  color: #333;
-  margin-bottom: 30px;
-  font-family:
-    system-ui,
-    -apple-system,
-    sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
 .slider-wrapper {
@@ -44,52 +31,25 @@
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-  display: flex;
-  flex-direction: column;
-  aspect-ratio: 16/9;
   width: 100%;
 }
 
 .card-image-container {
-  flex: 1;
+  width: 100%;
   overflow: hidden;
   position: relative;
-  aspect-ratio: 16/9;
+  aspect-ratio: 4/3;
 }
 
 .card-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.3s ease;
+  transition: opacity 0.3s ease;
 }
 
 .slider-card:hover .card-image {
-  transform: scale(1.05);
-}
-
-.card-content {
-  padding: 25px;
-  text-align: center;
-  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-}
-
-.card-title {
-  font-size: 24px;
-  font-weight: 700;
-  color: #333;
-  margin: 0 0 10px 0;
-  font-family:
-    system-ui,
-    -apple-system,
-    sans-serif;
-}
-
-.card-description {
-  font-size: 16px;
-  color: #666;
-  margin: 0;
-  line-height: 1.5;
+  opacity: 0.9;
 }
 
 .slider-btn {
@@ -99,21 +59,22 @@
   background: rgba(255, 255, 255, 0.9);
   border: none;
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
   font-weight: bold;
   color: #333;
   cursor: pointer;
   z-index: 10;
-  transition: all 0.3s ease;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .slider-btn:hover {
   background: white;
   color: #f96d00;
-  transform: translateY(-50%) scale(1.1);
 }
 
 .prev-btn {
@@ -127,81 +88,57 @@
 .slider-dots {
   display: flex;
   justify-content: center;
-  gap: 10px;
-  margin-top: 25px;
+  gap: 8px;
+  margin-top: 15px;
 }
 
 .dot {
-  width: 12px;
-  height: 12px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
   border: none;
   background: #ddd;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: background 0.3s ease;
 }
 
 .dot:hover {
   background: #bbb;
-  transform: scale(1.2);
 }
 
 .dot.active {
   background: #f96d00;
-  transform: scale(1.3);
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .slider-container {
-    margin: 20px auto;
-    padding: 15px;
-  }
-
-  .slider-title {
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-
-  .card-content {
-    padding: 20px;
-  }
-
-  .card-title {
-    font-size: 20px;
-  }
-
-  .card-description {
-    font-size: 14px;
-  }
-
-  .slider-btn {
-    width: 40px;
-    height: 40px;
-    font-size: 20px;
-  }
-
-  .prev-btn {
-    left: 10px;
-  }
-
-  .next-btn {
-    right: 10px;
-  }
-}
-
-@media (max-width: 480px) {
-  .card-content {
-    padding: 15px;
-  }
-
-  .card-title {
-    font-size: 18px;
-  }
-
   .slider-btn {
     width: 35px;
     height: 35px;
     font-size: 18px;
+  }
+
+  .prev-btn {
+    left: 8px;
+  }
+
+  .next-btn {
+    right: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .slider-btn {
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+  }
+
+  .prev-btn {
+    left: 5px;
+  }
+
+  .next-btn {
+    right: 5px;
   }
 }

@@ -1,0 +1,37 @@
+.shop-section-container {
+  display: flex;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+  align-items: flex-start;
+}
+
+.shop-section-left {
+  flex: 1;
+  min-width: 0;
+}
+
+.shop-section-right {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Responsive Design - Stack vertically on mobile */
+@media (max-width: 768px) {
+  .shop-section-container {
+    flex-direction: column;
+    gap: 30px;
+    margin: 20px auto;
+    padding: 0 15px;
+  }
+
+  /* On mobile, show shop info first, then carousel below */
+  .shop-section-left {
+    order: 1;
+  }
+
+  .shop-section-right {
+    order: 2;
+  }
+}

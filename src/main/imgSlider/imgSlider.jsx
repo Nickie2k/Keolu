@@ -56,41 +56,35 @@ const ImgSlider = () => {
 
   return (
     <div className="slider-container">
-      <h2 className="slider-title">Our Beer Selection</h2>
-      
       <div className="slider-wrapper">
         <button className="slider-btn prev-btn" onClick={prevSlide}>
           &#8249;
         </button>
-        
+
         <div className="slider-track">
-          <div 
+          <div
             className="slider-content"
             style={{ transform: `translateX(-${currentSlide * 100}%)` }}
           >
             {cards.map((card) => (
               <div key={card.id} className="slider-card">
                 <div className="card-image-container">
-                  <img 
-                    src={card.image} 
+                  <img
+                    src={card.image}
                     alt={card.title}
                     className="card-image"
                   />
-                </div>
-                <div className="card-content">
-                  <h3 className="card-title">{card.title}</h3>
-                  <p className="card-description">{card.description}</p>
                 </div>
               </div>
             ))}
           </div>
         </div>
-        
+
         <button className="slider-btn next-btn" onClick={nextSlide}>
           &#8250;
         </button>
       </div>
-      
+
       <div className="slider-dots">
         {cards.map((_, index) => (
           <button

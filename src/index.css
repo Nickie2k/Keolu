@@ -1,18 +1,50 @@
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
   background-color: white;
+
+  /* Enable smooth font rendering */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
-html,
+html {
+  scroll-behavior: smooth;
+  /* Prevent horizontal scroll on mobile */
+  overflow-x: hidden;
+}
+
 body {
-  width: auto;
+  width: 100%;
   margin: 0;
   padding: 0;
   overflow-y: auto;
-  min-height: 200vh;
+  overflow-x: hidden;
+  min-height: 100vh;
+
+  /* Improve scrolling on iOS */
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Performance optimizations */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 /* * {
