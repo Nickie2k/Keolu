@@ -1,40 +1,37 @@
 import React, { useState } from "react";
 import "./imgSlider.css";
+import KLFront from "./KLFront.webp";
+import KL2 from "./KL2.webp";
+import KL3 from "./KL3.jpg";
+import KL4 from "./KL4.webp";
 
 const ImgSlider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  // Sample cards data - you can replace these with your actual images
   const cards = [
     {
       id: 1,
-      image: "https://via.placeholder.com/400x300/FF6B35/FFFFFF?text=Beer+1",
-      title: "Craft Lager",
-      description: "Smooth and refreshing craft lager"
+      image: KLFront,
+      title: "Keolu Beer Front",
+      description: "Welcome to Keolu Beer"
     },
     {
       id: 2,
-      image: "https://via.placeholder.com/400x300/F7931E/FFFFFF?text=Beer+2",
-      title: "IPA Special",
-      description: "Hoppy India Pale Ale with citrus notes"
+      image: KL2,
+      title: "Keolu Beer",
+      description: "Craft beer experience"
     },
     {
       id: 3,
-      image: "https://via.placeholder.com/400x300/FFD23F/333333?text=Beer+3",
-      title: "Wheat Beer",
-      description: "Light and cloudy wheat beer"
+      image: KL3,
+      title: "Keolu Beer",
+      description: "Premium selection"
     },
     {
       id: 4,
-      image: "https://via.placeholder.com/400x300/EE4B2B/FFFFFF?text=Beer+4",
-      title: "Dark Stout",
-      description: "Rich and creamy dark stout"
-    },
-    {
-      id: 5,
-      image: "https://via.placeholder.com/400x300/40E0D0/333333?text=Beer+5",
-      title: "Pilsner",
-      description: "Classic crisp pilsner"
+      image: KL4,
+      title: "Keolu Beer",
+      description: "Quality brews"
     }
   ];
 

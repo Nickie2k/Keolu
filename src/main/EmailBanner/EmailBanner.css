@@ -1,0 +1,194 @@
+.email-banner-container {
+  background: linear-gradient(135deg, #ffb38a 0%, #ffc9a8 100%);
+  padding: 40px 20px;
+  margin-top: 0;
+}
+
+.email-banner-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.text-icon-group {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex: 1;
+  margin-left: 270px;
+}
+
+.email-icon {
+  flex-shrink: 0;
+  width: 80px;
+  height: 80px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.banner-icon {
+  width: 45px;
+  height: 45px;
+  color: #f96d00;
+}
+
+.email-text-section {
+  flex: 1;
+  min-width: 250px;
+}
+
+.email-banner-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #333;
+  margin: 0 0 8px 0;
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
+}
+
+.email-banner-description {
+  font-size: 14px;
+  color: #555;
+  margin: 0;
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
+}
+
+.email-form {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.email-input {
+  flex: 1;
+  min-width: 250px;
+  padding: 12px 18px;
+  border: 2px solid white;
+  border-radius: 8px;
+  font-size: 15px;
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.email-input:focus {
+  border-color: #f96d00;
+}
+
+.email-input::placeholder {
+  color: #999;
+}
+
+.subscribe-button {
+  padding: 12px 30px;
+  background-color: #f96d00;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(249, 109, 0, 0.3);
+}
+
+.subscribe-button:hover {
+  background-color: #e65c00;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(249, 109, 0, 0.4);
+}
+
+.subscribe-button:active {
+  transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .email-banner-container {
+    padding: 30px 15px;
+  }
+
+  .email-banner-content {
+    gap: 20px;
+  }
+
+  .text-icon-group {
+    margin-left: 0;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .email-icon {
+    width: 70px;
+    height: 70px;
+  }
+
+  .banner-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .email-banner-title {
+    font-size: 20px;
+  }
+
+  .email-banner-description {
+    font-size: 13px;
+  }
+
+  .email-form {
+    width: 100%;
+  }
+
+  .email-input {
+    min-width: 100%;
+  }
+
+  .subscribe-button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .email-banner-container {
+    padding: 25px 10px;
+  }
+
+  .email-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .banner-icon {
+    width: 35px;
+    height: 35px;
+  }
+
+  .email-banner-title {
+    font-size: 18px;
+  }
+
+  .email-banner-description {
+    font-size: 12px;
+  }
+}

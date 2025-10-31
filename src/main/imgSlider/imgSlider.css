@@ -1,5 +1,7 @@
 .slider-container {
   width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -38,7 +40,7 @@
   width: 100%;
   overflow: hidden;
   position: relative;
-  aspect-ratio: 4/3;
+  aspect-ratio: 4/3.5;
 }
 
 .card-image {

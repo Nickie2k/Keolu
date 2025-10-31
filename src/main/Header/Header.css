@@ -33,8 +33,7 @@
 }
 
 .header-welcome-text:focus {
-  outline: 2px solid #f96d00;
-  outline-offset: 2px;
+  outline: none;
 }
 
 /* iPhone and Mobile Optimizations */
