@@ -9,9 +9,12 @@
 .shop-info-title {
   font-size: 32px;
   font-weight: 700;
-  color: #333;
+  color: #f96d00;
   margin: 0 0 15px 0;
-  font-family: system-ui, -apple-system, sans-serif;
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
 }
 
 .shop-info-description {
@@ -19,7 +22,10 @@
   color: #666;
   line-height: 1.6;
   margin: 0 0 20px 0;
-  font-family: system-ui, -apple-system, sans-serif;
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
 }
 
 .shop-info-additional {
@@ -27,7 +33,10 @@
   color: #666;
   line-height: 1.6;
   margin: 0 0 20px 0;
-  font-family: system-ui, -apple-system, sans-serif;
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
 }
 
 .social-media-links {
@@ -65,7 +74,14 @@
 }
 
 .social-link.instagram {
-  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  background: linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
   color: white;
 }
 

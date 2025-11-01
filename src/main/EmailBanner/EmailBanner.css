@@ -1,6 +1,6 @@
 .email-banner-container {
   background: linear-gradient(135deg, #ffb38a 0%, #ffc9a8 100%);
-  padding: 40px 20px;
+  padding: 40px 20px 0 20px;
   margin-top: 0;
 }
 
@@ -190,5 +190,198 @@
 
   .email-banner-description {
     font-size: 12px;
+  }
+}
+
+/* Footer Information Section */
+.footer-info {
+  max-width: 1200px;
+  margin: 20px auto 0 auto;
+  padding: 30px 20px;
+  border-top: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.footer-columns {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-heading {
+  color: #393e46;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
+}
+
+.footer-text {
+  color: #555;
+  font-size: 14px;
+  margin: 0;
+  line-height: 1.6;
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
+}
+
+.footer-link {
+  color: #555;
+  font-size: 14px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.footer-link:hover {
+  color: #f96d00;
+}
+
+/* Payment Methods Section */
+.payment-methods {
+  max-width: 1200px;
+  margin: 30px auto 0 auto;
+  padding: 25px 20px 20px 20px;
+  text-align: center;
+  border-top: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.payment-title {
+  color: #393e46;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 0 20px 0;
+  font-family: 'Playfair Display', serif;
+}
+
+.payment-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.payment-card {
+  background: white;
+  padding: 8px 12px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.payment-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.payment-icon {
+  height: 40px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+}
+
+/* Copyright Section */
+.footer-bottom {
+  background-color: #393e46;
+  padding: 20px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.copyright-text {
+  color: #ffffff;
+  font-size: 14px;
+  margin: 0;
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
+}
+
+/* Responsive Footer */
+@media (max-width: 968px) {
+  .footer-columns {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-info {
+    margin: 40px auto 0 auto;
+    padding: 30px 15px;
+  }
+
+  .footer-columns {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .footer-column {
+    text-align: center;
+  }
+
+  .footer-heading {
+    font-size: 16px;
+  }
+
+  .footer-text {
+    font-size: 13px;
+  }
+
+  .footer-link {
+    font-size: 13px;
+  }
+
+  .copyright-text {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-info {
+    padding: 25px 10px;
+  }
+
+  .copyright-text {
+    font-size: 11px;
+  }
+
+  .payment-methods {
+    padding: 25px 10px;
+  }
+
+  .payment-title {
+    font-size: 16px;
+  }
+
+  .payment-logos {
+    gap: 10px;
+  }
+
+  .payment-card {
+    padding: 6px 10px;
+  }
+
+  .payment-icon {
+    height: 32px;
+    width: auto;
   }
 }

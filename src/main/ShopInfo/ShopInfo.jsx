@@ -8,13 +8,11 @@ const ShopInfo = () => {
       <p className="shop-info-description">
         Welcome to Keolu Beer, your premier destination for craft beers and
         unique brews. We offer a carefully curated selection of local and
-        international beers, perfect for every taste and occasion.
-      </p>
-      <p className="shop-info-additional">
-        While Keolu Beer is your premier destination for craft brews, our offerings span a
+        international beers, perfect for every taste and occasion. While Keolu
+        Beer is your premier destination for craft brews, our offerings span a
         wide spectrum of fine packaged goods. Explore our expertly curated
         selection of fine wines, distinguished whiskies, and our signature
-        collection of local and international beers.
+        collection of local and international beers
       </p>
       <div className="social-media-links">
         <a
