@@ -1,6 +1,7 @@
 :root {
-  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
+  /* Body text font - Montserrat */
+  font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
   font-weight: 400;
   background-color: white;
 
@@ -8,6 +9,13 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+}
+
+/* Headings font - Playfair Display */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  line-height: 1.2;
 }
 
 html {
@@ -46,10 +54,6 @@ body {
     scroll-behavior: auto !important;
   }
 }
-
-/* * {
-  border: 1px solid red;
-} */
 .header-welcome-text {
   color: #f96d00;
   font-size: 15px;
@@ -91,22 +95,25 @@ body {
 /* iPhone and Mobile Optimizations */
 @media (max-width: 768px) {
   .header-container {
-    padding: 12px 15px;
+    padding: 8px 15px;
   }
 
   .header-welcome-text {
-    font-size: 14px;
-    padding: 8px 12px;
+    font-size: 13px;
+    padding: 6px 10px;
     display: inline-block;
   }
 }
 
 @media (max-width: 430px) {
+  .header-container {
+    padding: 6px 10px;
+  }
+
   .header-welcome-text {
-    font-size: 13px;
-    padding: 10px 15px;
-    /* Make it more touch-friendly for iPhone */
-    min-height: 44px;
+    font-size: 12px;
+    padding: 8px 12px;
+    min-height: 36px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -115,11 +122,12 @@ body {
 
 @media (max-width: 375px) {
   .header-container {
-    padding: 10px;
+    padding: 6px 8px;
   }
 
   .header-welcome-text {
-    font-size: 12px;
+    font-size: 11px;
+    padding: 6px 10px;
   }
 }
 .my-header-container {
@@ -141,7 +149,7 @@ body {
 }
 
 .my-header-brand {
-  color: #333;
+  color: #f96d00;
   font-size: 28px;
   font-weight: 700;
   margin: 0;
@@ -500,9 +508,12 @@ body {
 .shop-info-title {
   font-size: 32px;
   font-weight: 700;
-  color: #333;
+  color: #f96d00;
   margin: 0 0 15px 0;
-  font-family: system-ui, -apple-system, sans-serif;
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
 }
 
 .shop-info-description {
@@ -510,7 +521,10 @@ body {
   color: #666;
   line-height: 1.6;
   margin: 0 0 20px 0;
-  font-family: system-ui, -apple-system, sans-serif;
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
 }
 
 .shop-info-additional {
@@ -518,7 +532,10 @@ body {
   color: #666;
   line-height: 1.6;
   margin: 0 0 20px 0;
-  font-family: system-ui, -apple-system, sans-serif;
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
 }
 
 .social-media-links {
@@ -556,7 +573,14 @@ body {
 }
 
 .social-link.instagram {
-  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  background: linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
   color: white;
 }
 
@@ -931,7 +955,7 @@ body {
 }
 .email-banner-container {
   background: linear-gradient(135deg, #ffb38a 0%, #ffc9a8 100%);
-  padding: 40px 20px;
+  padding: 40px 20px 0 20px;
   margin-top: 0;
 }
 
@@ -1121,6 +1145,199 @@ body {
 
   .email-banner-description {
     font-size: 12px;
+  }
+}
+
+/* Footer Information Section */
+.footer-info {
+  max-width: 1200px;
+  margin: 20px auto 0 auto;
+  padding: 30px 20px;
+  border-top: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.footer-columns {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-heading {
+  color: #393e46;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
+}
+
+.footer-text {
+  color: #555;
+  font-size: 14px;
+  margin: 0;
+  line-height: 1.6;
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
+}
+
+.footer-link {
+  color: #555;
+  font-size: 14px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.footer-link:hover {
+  color: #f96d00;
+}
+
+/* Payment Methods Section */
+.payment-methods {
+  max-width: 1200px;
+  margin: 30px auto 0 auto;
+  padding: 25px 20px 20px 20px;
+  text-align: center;
+  border-top: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.payment-title {
+  color: #393e46;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 0 20px 0;
+  font-family: 'Playfair Display', serif;
+}
+
+.payment-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.payment-card {
+  background: white;
+  padding: 8px 12px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.payment-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.payment-icon {
+  height: 40px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+}
+
+/* Copyright Section */
+.footer-bottom {
+  background-color: #393e46;
+  padding: 20px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.copyright-text {
+  color: #ffffff;
+  font-size: 14px;
+  margin: 0;
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
+}
+
+/* Responsive Footer */
+@media (max-width: 968px) {
+  .footer-columns {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-info {
+    margin: 40px auto 0 auto;
+    padding: 30px 15px;
+  }
+
+  .footer-columns {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .footer-column {
+    text-align: center;
+  }
+
+  .footer-heading {
+    font-size: 16px;
+  }
+
+  .footer-text {
+    font-size: 13px;
+  }
+
+  .footer-link {
+    font-size: 13px;
+  }
+
+  .copyright-text {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-info {
+    padding: 25px 10px;
+  }
+
+  .copyright-text {
+    font-size: 11px;
+  }
+
+  .payment-methods {
+    padding: 25px 10px;
+  }
+
+  .payment-title {
+    font-size: 16px;
+  }
+
+  .payment-logos {
+    gap: 10px;
+  }
+
+  .payment-card {
+    padding: 6px 10px;
+  }
+
+  .payment-icon {
+    height: 32px;
+    width: auto;
   }
 }
 .beach-container {
@@ -1378,5 +1595,175 @@ body {
 
   .beer-cta {
     font-size: 0.8rem;
+  }
+}
+.store-hour-container {
+  background-color: #f5f5f5;
+  padding: 60px 20px;
+  width: 100%;
+}
+
+.store-hour-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+}
+
+/* Left side - Opening Hours */
+.store-hour-info {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 600px;
+}
+
+.store-hour-title {
+  color: #393e46;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  text-align: center;
+  border-bottom: 3px solid #f96d00;
+  padding-bottom: 12px;
+}
+
+.store-hours-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+}
+
+.hour-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 18px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+.day {
+  color: #393e46;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.time {
+  color: #f96d00;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.store-note {
+  text-align: center;
+  color: #666;
+  font-size: 15px;
+  font-style: italic;
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid #e0e0e0;
+}
+
+/* Right side - Map */
+.store-map {
+  min-height: 600px;
+}
+
+/* Tablet View */
+@media (max-width: 968px) {
+  .store-hour-content {
+    grid-template-columns: 1fr;
+  }
+
+  .store-hour-info {
+    height: auto;
+  }
+
+  .store-map {
+    height: 400px;
+  }
+
+  .store-hour-title {
+    font-size: 28px;
+  }
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+  .store-hour-container {
+    padding: 40px 15px;
+  }
+
+  .store-hour-info {
+    padding: 30px 20px;
+    height: auto;
+  }
+
+  .store-hour-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .hour-item {
+    padding: 12px 15px;
+  }
+
+  .day {
+    font-size: 16px;
+  }
+
+  .time {
+    font-size: 14px;
+  }
+
+  .store-map {
+    height: 350px;
+  }
+
+  .store-note {
+    font-size: 14px;
+  }
+}
+
+/* Small Mobile View */
+@media (max-width: 430px) {
+  .store-hour-container {
+    padding: 30px 10px;
+  }
+
+  .store-hour-info {
+    padding: 25px 15px;
+    height: auto;
+  }
+
+  .store-hour-title {
+    font-size: 22px;
+  }
+
+  .hour-item {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+    padding: 15px;
+  }
+
+  .day {
+    font-size: 15px;
+  }
+
+  .time {
+    font-size: 13px;
+  }
+
+  .store-map {
+    height: 300px;
   }
 }
